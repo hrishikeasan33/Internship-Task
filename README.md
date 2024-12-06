@@ -79,4 +79,38 @@ Create a web page where users can input a date, its current format, and a desire
 - **Output**: `11/2012/12`
 ![image](https://github.com/user-attachments/assets/b2eb0071-4d44-4d8b-ad8a-14c0ccffc2d0)
 
+# Task 5: Electronic Device Information Page
+
+## Problem Description
+Create a frontend webpage with:
+1. Multiple clickable device names (e.g., MobilePhone, Laptop, Desktop).
+2. On clicking a device, a new tab/iframe opens to show:
+   - Device description.
+   - A colorful gradient background.
+   - An icon representing the device.
+
+## Code Explanation
+1. **HTML**:
+   - Contains a list of clickable buttons with device names.
+   - Each button has an image and triggers a JavaScript function (`showDeviceInfo`) on click.
+
+2. **CSS**:
+   - Centers the content vertically and horizontally using `flexbox`.
+   - Applies gradient backgrounds and hover effects to enhance the design.
+   - Device buttons are styled with shadow, rounded edges, and animations for a modern look.
+
+3. **JavaScript**:
+   - `showDeviceInfo` dynamically generates and opens a new tab:
+     - Displays the device name, icon, and description.
+     - Applies a unique gradient background for each device.
+     - Includes a "Go Back" button to close the new tab.
+    
+Output :
+![image](https://github.com/user-attachments/assets/0b8722c3-1e83-4fb2-8fce-e0880bb364b2)
+![image](https://github.com/user-attachments/assets/48d0d24b-8909-4fd6-9d08-ba7c905c07e9)
+![image](https://github.com/user-attachments/assets/146fb36e-135c-4199-a6df-2ae4b5ba3b19)
+![image](https://github.com/user-attachments/assets/b30cf96f-6506-494f-9cbc-07cfc7cc16e2)
+
+
+
 
