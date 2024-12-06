@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-## Technical Task 1
+## Technical Task 2
 ## Program to convert all odd length string as, first half of the string to lowercase and second half of string to lowercase.
 
 
