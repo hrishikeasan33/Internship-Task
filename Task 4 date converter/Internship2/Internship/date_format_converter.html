@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Format Converter</title>
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Animated background particles */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+            animation: spin 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Main container styling */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Title styling */
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        /* Input styling */
+        input {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 12px 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(106, 17, 203, 0.5);
+        }
+
+        /* Button styling */
+        button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            font-size: 18px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+        }
+
+        button:active {
+            transform: scale(1);
+            box-shadow: 0 2px 8px rgba(106, 17, 203, 0.3);
+        }
+
+        /* Output box styling */
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Date Format Converter</h2>
+        <input id="inputDate" placeholder="Enter Date (DD/MM/YYYY)" />
+        <input id="inputFormat" placeholder="Input Format (e.g., DD/MM/YYYY)" />
+        <input id="expectedFormat" placeholder="Expected Format (e.g., MM/YYYY/DD)" />
+        <button onclick="convertDate()">Convert Date</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function convertDate() {
+            // Retrieve user input
+            const date = document.getElementById('inputDate').value;
+            const inputFormat = document.getElementById('inputFormat').value;
+            const expectedFormat = document.getElementById('expectedFormat').value;
+
+            // Validate input
+            if (!date || !inputFormat || !expectedFormat) {
+                document.getElementById('output').innerText = "Please fill in all fields.";
+                return;
+            }
+
+            // Split date into parts
+            const parts = date.split('/');
+            const mapping = { DD: parts[0], MM: parts[1], YYYY: parts[2] };
+
+            // Generate output using the expected format
+            const result = expectedFormat.replace(/DD|MM|YYYY/g, match => mapping[match]);
+
+            // Display the result
+            document.getElementById('output').innerText = `Converted Date: ${result}`;
+        }
+    </script>
+</body>
+</html>
