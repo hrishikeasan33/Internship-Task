@@ -49,5 +49,34 @@ Write a program to find the **second** and **fourth greatest numbers** in a list
    - ![image](https://github.com/user-attachments/assets/3fc5a3d9-d664-4e37-9639-6bcaf6c4db66)
    -  Returns an error message otherwise.
    -  ![image](https://github.com/user-attachments/assets/45c4b098-d2e8-423e-bd14-421029da26c1)
+# Task 4: Date Format Converter
+
+## Problem Description
+Create a web page where users can input a date, its current format, and a desired format. On clicking a button, the date is converted and displayed in the desired format.
+
+## Code Explanation
+1. **HTML**:
+   - Includes input fields for the date, current format, and desired format.
+   - A button triggers the date conversion.
+   - An output box displays the converted date.
+
+2. **CSS**:
+   - The page is centered with `flexbox`.
+   - Features a gradient background and interactive focus/hover effects.
+
+3. **JavaScript**:
+   - Splits the input date into `DD`, `MM`, `YYYY` parts.
+   - Replaces placeholders in the desired format with the corresponding values.
+   - Displays the converted date or an error message if fields are empty.
+
+## Example
+![image](https://github.com/user-attachments/assets/6147a611-5736-49f7-8271-b83ec7eabc94)
+
+- **Input**: `12/11/2012`, `DD/MM/YYYY`, `MM/YYYY/DD`
+- ![image](https://github.com/user-attachments/assets/3940422f-6212-4cff-b923-2e4edfa14e8f)
+
+
+- **Output**: `11/2012/12`
+![image](https://github.com/user-attachments/assets/b2eb0071-4d44-4d8b-ad8a-14c0ccffc2d0)
 
 
